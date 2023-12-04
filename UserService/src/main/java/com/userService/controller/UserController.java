@@ -52,7 +52,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateUserById(@PathVariable String id, @RequestBody User updatedUser) {
+    public ResponseEntity<User> updateUserById(@PathVariable String id, @RequestBody User updatedUser) {
         User user = userService.updateUserById(id, updatedUser);
         return ResponseEntity.ok(user);
     }
